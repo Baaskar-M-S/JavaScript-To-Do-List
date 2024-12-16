@@ -1,0 +1,199 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url(./5153829.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start; /* Start content from the top */
+  justify-content: center;
+  padding: 20px; /* Add padding for mobile spacing */
+}
+
+.todo-container {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  /* border-radius: 15px; */
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 20px; /* Add spacing from the top for mobile */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.clear-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clear-btn:hover {
+  background: #c0392b;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-form input,
+.todo-form textarea,
+.add-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.todo-form input,
+.todo-form textarea {
+  background: #333;
+  color: #fff;
+}
+
+.add-btn {
+  background: #27ae60;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-btn:hover {
+  background: #2ecc71;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  background: #444;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.todo-item h3 {
+  font-size: 1.2rem;
+}
+
+.todo-item p {
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.todo-item .actions {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-item .edit-btn,
+.todo-item .delete-btn {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.todo-item .delete-btn {
+  background: #e74c3c;
+}
+
+.todo-item .edit-btn:hover {
+  background: #2980b9;
+}
+
+.todo-item .delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: stretch; /* Ensure the container spans full width */
+    padding: 10px;
+  }
+
+  .todo-container {
+    margin-top: 10px;
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .add-btn {
+    font-size: 0.9rem;
+  }
+
+  .todo-item {
+    padding: 10px;
+  }
+
+  .todo-item h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop view adjustments */
+@media (min-width: 769px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .todo-container {
+    max-width: 700px; /* Increase container width for desktop */
+    padding: 30px; /* Add more padding for desktop */
+    margin-top: 0;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .add-btn {
+    font-size: 1.2rem;
+  }
+
+  .todo-item {
+    padding: 20px;
+  }
+
+  .todo-item h3 {
+    font-size: 1.4rem;
+  }
+}
